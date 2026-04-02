@@ -1,0 +1,7 @@
+{
+  "name": "MediGuide AI",
+  "description": "智能医疗导诊平台，提供症状分析、科室推荐及就医建议。",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
