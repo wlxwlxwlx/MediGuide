@@ -20,3 +20,4 @@ View your app in AI Studio: https://ai.studio/apps/bf18fb36-870f-4523-8f72-0da3b
    `npm run dev`
 
 hello world!!
+hello world2!!
