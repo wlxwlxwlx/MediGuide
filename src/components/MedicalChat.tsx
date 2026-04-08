@@ -56,15 +56,15 @@ export default function MedicalChat() {
   };
 
   return (
-    <div className="flex flex-col h-[600px] bg-white rounded-2xl shadow-xl overflow-hidden border border-blue-50">
+    <div className="flex flex-col h-[600px] bg-white rounded-2xl shadow-xl overflow-hidden border border-emerald-50">
       {/* Header */}
-      <div className="bg-blue-600 p-4 text-white flex items-center gap-3">
+      <div className="bg-emerald-600 p-4 text-white flex items-center gap-3">
         <div className="bg-white/20 p-2 rounded-lg">
           <Bot size={24} />
         </div>
         <div>
-          <h2 className="font-semibold">智能导诊助手</h2>
-          <p className="text-xs text-blue-100">AI 辅助症状分析与科室建议</p>
+          <h2 className="font-display font-semibold">智能导诊助手</h2>
+          <p className="text-xs text-emerald-100">AI 辅助症状分析与科室建议</p>
         </div>
       </div>
 
@@ -83,15 +83,15 @@ export default function MedicalChat() {
             >
               <div className={cn(
                 "w-8 h-8 rounded-full flex items-center justify-center shrink-0",
-                msg.role === 'user' ? "bg-blue-600 text-white" : "bg-white border border-blue-100 text-blue-600 shadow-sm"
+                msg.role === 'user' ? "bg-emerald-600 text-white" : "bg-white border border-emerald-100 text-emerald-600 shadow-sm"
               )}>
                 {msg.role === 'user' ? <User size={16} /> : <Bot size={16} />}
               </div>
               <div className={cn(
                 "p-3 rounded-2xl text-sm leading-relaxed",
                 msg.role === 'user' 
-                  ? "bg-blue-600 text-white rounded-tr-none" 
-                  : "bg-white text-slate-700 shadow-sm border border-blue-50 rounded-tl-none"
+                  ? "bg-emerald-600 text-white rounded-tr-none" 
+                  : "bg-white text-slate-700 shadow-sm border border-emerald-50 rounded-tl-none"
               )}>
                 <div className="prose prose-sm max-w-none">
                   <ReactMarkdown>
@@ -104,14 +104,14 @@ export default function MedicalChat() {
         </AnimatePresence>
         {isLoading && (
           <div className="flex gap-3">
-            <div className="w-8 h-8 rounded-full bg-white border border-blue-100 text-blue-600 flex items-center justify-center shadow-sm">
+            <div className="w-8 h-8 rounded-full bg-white border border-emerald-100 text-emerald-600 flex items-center justify-center shadow-sm">
               <Loader2 size={16} className="animate-spin" />
             </div>
-            <div className="bg-white p-3 rounded-2xl rounded-tl-none shadow-sm border border-blue-50">
+            <div className="bg-white p-3 rounded-2xl rounded-tl-none shadow-sm border border-emerald-50">
               <div className="flex gap-1">
-                <span className="w-1.5 h-1.5 bg-blue-400 rounded-full animate-bounce" style={{ animationDelay: '0ms' }} />
-                <span className="w-1.5 h-1.5 bg-blue-400 rounded-full animate-bounce" style={{ animationDelay: '150ms' }} />
-                <span className="w-1.5 h-1.5 bg-blue-400 rounded-full animate-bounce" style={{ animationDelay: '300ms' }} />
+                <span className="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-bounce" style={{ animationDelay: '0ms' }} />
+                <span className="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-bounce" style={{ animationDelay: '150ms' }} />
+                <span className="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-bounce" style={{ animationDelay: '300ms' }} />
               </div>
             </div>
           </div>
@@ -127,12 +127,12 @@ export default function MedicalChat() {
             onChange={(e) => setInput(e.target.value)}
             onKeyDown={(e) => e.key === 'Enter' && handleSend()}
             placeholder="描述您的症状，例如：头痛、发烧..."
-            className="w-full pl-4 pr-12 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all text-sm"
+            className="w-full pl-4 pr-12 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all text-sm"
           />
           <button
             onClick={handleSend}
             disabled={!input.trim() || isLoading}
-            className="absolute right-2 p-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+            className="absolute right-2 p-2 bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
           >
             <Send size={18} />
           </button>

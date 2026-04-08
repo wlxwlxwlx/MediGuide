@@ -60,21 +60,21 @@ export default function HospitalFinder() {
   };
 
   return (
-    <div className="bg-white rounded-2xl shadow-xl p-6 border border-blue-50">
+    <div className="bg-white rounded-2xl shadow-xl p-6 border border-emerald-50">
       <div className="flex items-center justify-between mb-6">
         <div className="flex items-center gap-3">
-          <div className="bg-blue-100 p-2 rounded-lg text-blue-600">
+          <div className="bg-emerald-100 p-2 rounded-lg text-emerald-600">
             <MapPin size={24} />
           </div>
           <div>
-            <h2 className="font-semibold text-slate-800">附近医院查询</h2>
+            <h2 className="font-display font-semibold text-slate-800">附近医院查询</h2>
             <p className="text-xs text-slate-500">基于您的位置推荐三甲医院</p>
           </div>
         </div>
         <button
           onClick={handleGetLocation}
           disabled={isLoading}
-          className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-xl hover:bg-blue-700 disabled:opacity-50 transition-all text-sm font-medium shadow-md shadow-blue-200"
+          className="flex items-center gap-2 px-4 py-2 bg-emerald-600 text-white rounded-xl hover:bg-emerald-700 disabled:opacity-50 transition-all text-sm font-medium shadow-md shadow-emerald-200"
         >
           {isLoading ? <Loader2 size={16} className="animate-spin" /> : <Navigation size={16} />}
           {location ? "重新定位" : "获取位置"}
@@ -100,7 +100,7 @@ export default function HospitalFinder() {
             animate={{ opacity: 1 }}
             className="flex flex-col items-center justify-center py-12 text-slate-400"
           >
-            <Loader2 size={40} className="animate-spin mb-4 text-blue-500" />
+            <Loader2 size={40} className="animate-spin mb-4 text-emerald-500" />
             <p className="text-sm font-medium">正在为您寻找附近的医疗机构...</p>
           </motion.div>
         ) : hospitals.length > 0 ? (
@@ -118,20 +118,20 @@ export default function HospitalFinder() {
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: idx * 0.05 }}
-                className="group p-4 bg-slate-50 border border-slate-100 rounded-xl hover:bg-white hover:border-blue-200 hover:shadow-lg transition-all flex items-center justify-between"
+                className="group p-4 bg-slate-50 border border-slate-100 rounded-xl hover:bg-white hover:border-emerald-200 hover:shadow-lg transition-all flex items-center justify-between"
               >
                 <div className="flex items-center gap-3">
-                  <div className="bg-white p-2 rounded-lg text-blue-500 shadow-sm group-hover:bg-blue-50 transition-colors">
+                  <div className="bg-white p-2 rounded-lg text-emerald-500 shadow-sm group-hover:bg-emerald-50 transition-colors">
                     <Hospital size={20} />
                   </div>
                   <div>
-                    <h3 className="font-medium text-slate-800 text-sm group-hover:text-blue-600 transition-colors">
+                    <h3 className="font-display font-medium text-slate-800 text-sm group-hover:text-emerald-600 transition-colors">
                       {hospital.title}
                     </h3>
                     <p className="text-[10px] text-slate-400 mt-0.5">点击查看详情与导航</p>
                   </div>
                 </div>
-                <ExternalLink size={16} className="text-slate-300 group-hover:text-blue-500 transition-colors" />
+                <ExternalLink size={16} className="text-slate-300 group-hover:text-emerald-500 transition-colors" />
               </motion.a>
             ))}
           </motion.div>
