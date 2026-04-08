@@ -178,7 +178,7 @@ export default function App() {
               <div className="w-12 h-12 bg-indigo-100 rounded-2xl flex items-center justify-center text-indigo-600 mb-6">
                 <ShieldCheck size={24} />
               </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-3">精准科室推荐</h3>
+              <h3 className="text-xl font-bold text-slate-900 mb-3">精准科室���荐</h3>
               <p className="text-slate-600 text-sm leading-relaxed">
                 根据症状描述，为您推荐最合适的就诊科室，避免挂错号、走弯路。
               </p>
